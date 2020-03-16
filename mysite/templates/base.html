@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="http://necolas.github.io/normalize.css/">
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <style type="text/css">
+    table {
+    caption-side: top; /*标题显示位置*/
+    border-spacing: 20px 40px; /*表格数据间距，行间距，列间距*/
+    /*border-collapse: collapse; /*两个相邻表格的边框重合*/*/
+    }
+    caption {
+        font-family: sans-serif;
+        padding-top: 8px;
+    }
+    th {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>

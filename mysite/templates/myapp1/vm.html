@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} 虚拟节点信息 {% endblock %}
+{% block content %}
+
+<table>
+    <caption>虚拟机信息</caption>
+    <tr>
+        <th>虚拟机名</th>
+        <th>状态</th>
+    </tr>
+
+    {% for item in data %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.state }}</td>
+        <td><a href="{% url 'node_start' item.name %}">启动</a></td>
+        <td><a href="{% url 'node_shutdown' item.name %}">关闭</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

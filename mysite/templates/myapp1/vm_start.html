@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} 虚拟节点启动信息 {% endblock %}
+{% block content %}
+<table>
+    <caption>虚拟机信息</caption>
+    <tr>
+        <th>虚拟机名</th>
+        <th>状态</th>
+    </tr>
+    <tr>
+        <td>{{ context.name }}</td>
+        <td>{{ context.state }}</td>
+    </tr>
+</table>
+{% endblock %}
